@@ -1,0 +1,13 @@
+.Footer-container {
+    background-color: black;
+    height: 100px;
+    color: white;
+  }
+
+.Footer-centered {
+    text-align: center;
+    position: relative;
+    top: 40%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}

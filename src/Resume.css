@@ -1,0 +1,13 @@
+.Resume-container {
+    background-color: #E2D618;
+    color: black;
+    height: 100px;
+  }
+
+.Resume-centered {
+    text-align: center;
+    position: relative;
+    top: 40%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
