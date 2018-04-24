@@ -1,7 +1,4 @@
 .Home-container {
-    /* position: relative;
-    text-align: center;
-    color: white; */
     background-image: url('./backgroundLaptop.jpg');
     background-repeat: no-repeat;
     background-size:cover;
@@ -11,9 +8,18 @@
 .Home-centered {
     color: white;
     font-size: 3.00em;
-    text-align: center;
+    text-align: left;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+#profilepic {
+    position: absolute;
+    width: 15em;
+    height: 15em;
+    top: 20px;
+    right: 20px;
 }
