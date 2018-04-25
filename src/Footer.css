@@ -1,7 +1,8 @@
 .Footer-container {
     background-color: rgb(49, 45, 45);
     color: white;
-    height: 20%;
+    height: 100%;
+    width: 100%;
   }
 
 .Footer-centered {

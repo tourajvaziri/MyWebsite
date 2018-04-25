@@ -5,18 +5,26 @@ import Footer from './Footer';
 import Resume from './Resume';
 import Expertise from './Expertise';
 
- // const logo = require('./logo.svg');
+// const logo = require('./logo.svg');
 
 class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <Home />
-        <Expertise />
-        <Resume />
-        <Footer />
+        <div className="section">
+          <Home />
+        </div>
+        <div className="section-expertise">
+          <Expertise />
+        </div>
+        <div className="section-expertise">
+          <Resume />
+        </div>
+        <div className="section-expertise">
+          <Footer />
+        </div>
       </div>
-      
+
       // <div className="App">
       //   <header className="App-header">
       //     <img src={logo} className="App-logo" alt="logo" />
