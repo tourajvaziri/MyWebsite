@@ -4,8 +4,8 @@ import './Expertise.css';
 class Expertise extends React.Component {
     render() {
         return (
-            <div className="Resume-container">
-                <p className="Resume-centered">My Expertise</p>
+            <div className="Expertise-container">
+                <p className="Expertise-centered">My Expertise</p>
             </div>
         );
     }

@@ -1,0 +1,13 @@
+.Expertise-container {
+    background-color: white;
+    color: black;
+    height: 30%;
+  }
+
+.Expertise-centered {
+    text-align: center;
+    position: relative;
+    top: 10%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
