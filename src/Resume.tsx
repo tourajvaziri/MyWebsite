@@ -10,12 +10,10 @@ class Resume extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="columns">
-                            <p className="statement slate">
-                                Get in touch!<br />I am currently accepting new projects.
-                            </p>
+                            <p>Get in touch!<br />I am currently accepting new projects.</p>
                             <div>
                                 <button>
-                                    <a href={resume} className="ResumeBtn">DOWNLOAD RESUME</a>
+                                    <a href={resume} className="ResumeBtn" target="_blank">VIEW RESUME</a>
                                 </button>
                             </div>
                         </div>
