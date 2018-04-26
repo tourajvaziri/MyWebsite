@@ -1,32 +1,17 @@
-.Home-container {
-    background-image: url('./touraj.png');
-    background-repeat: round;
-    background-size: cover;
-    height: 30em;
-    width: 100%;
-    display: flex;
-}
-/* Centered text */
-.Home-centered {
-    color: white;
-    font-size: 3.00em;
-    text-align: left;
+#fullscreen-hero {
+    height: 100vh;
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
+    text-align: center;
+    width: 100%;
+    min-height: 350px;
+    background-color: #252a30;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
-#profilepic {
-    position: absolute;
-    border-image-repeat: repeat;
-    height: 100%;
-    top: 0%;
-    right: 0%;
-    left: 50%;
-    opacity: 0.4;
-    width: 50%;
+.home-hero {
+    background-image: url('./touraj.png');
 }
 
 #logo {

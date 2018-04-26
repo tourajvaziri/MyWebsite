@@ -1,26 +1,9 @@
-.Footer-container {
-    background-color: rgb(49, 45, 45);
-    color: white;
-    height: 10em;
-    width: 100%;
-  }
-
-.Footer-centered {
+footer {
+    padding: 80px 0 50px;
+    background-color: #252a30;
+    color: #fff;
     text-align: center;
-    position: relative;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
-
-/* #logoFooter {
-    position: relative;
-    width: 1em;
-    height: 1em;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
 
 /* Style all font awesome icons */
 .fa {

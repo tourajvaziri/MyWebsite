@@ -6,7 +6,7 @@ const logo = require('./logoIcon.png');
 class Home extends React.Component {
     render() {
         return (
-            <div className="Home-container">
+            <div id="fullscreen-hero" className="home-hero">
                 <img id="logo" src={logo} alt="logo" />
                 {/* <img id="profilepic" src={profilePic} alt="profile picture"/> */}
             </div>
