@@ -12,21 +12,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="section">
           <Home />
-        </div>
-        <div className="section-about">
           <About />
-        </div>
-        {/* <div className="section-expertise">
-          <Expertise />
-        </div> */}
-        <div className="section-expertise">
           <Resume />
-        </div>
-        <div className="section-expertise">
           <Footer />
-        </div>
       </div>
 
       // <div className="App">
