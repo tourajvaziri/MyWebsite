@@ -1,7 +1,8 @@
 .Home-container {
-    background-image: url('./backgroundLaptop.jpg');
-    background-repeat: no-repeat;
-    background-size:cover;
+    background-image: url('./touraj.png');
+    background-repeat: round;
+    background-size: cover;
+    background-color: tomato;
     height: 100%;
     width: 100%;
     display: flex;
@@ -20,10 +21,13 @@
 
 #profilepic {
     position: absolute;
-    width: 15em;
-    height: 15em;
-    top: 20px;
-    right: 20px;
+    border-image-repeat: repeat;
+    height: 100%;
+    top: 0%;
+    right: 0%;
+    left: 50%;
+    opacity: 0.4;
+    width: 50%;
 }
 
 #logo {

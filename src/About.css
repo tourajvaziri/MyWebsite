@@ -1,0 +1,14 @@
+.About-container {
+    background-color: rgb(117, 131, 125);
+    color: rgb(54, 54, 54);
+    height: 10em;
+    width: 100%;
+  }
+
+.About-centered {
+    text-align: center;
+    position: relative;
+    top: 10%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}

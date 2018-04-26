@@ -1,7 +1,7 @@
 .Expertise-container {
     background-color: white;
     color: black;
-    height: 100%;
+    height: 10em;
     width: 100%;
   }
 
@@ -10,5 +10,22 @@
     position: relative;
     top: 10%;
     left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.Expertise-CodeText {
+    text-align: center;
+    position: relative;
+    top: 10%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+#codeIcon {
+    position: absolute;
+    width: 3em;
+    height: 3em;
+    top: 125%;
+    left: 35%;
     transform: translate(-50%, -50%);
 }
