@@ -11,11 +11,9 @@ class Resume extends React.Component {
                     <div className="row">
                         <div className="columns">
                             <p>Get in touch!<br />I am currently accepting new projects.</p>
-                            <div>
-                                <button>
-                                    <a href={resume} className="ResumeBtn" target="_blank">VIEW RESUME</a>
-                                </button>
-                            </div>
+                                <div className="cd-modal-action">
+                                    <a href={resume} className="btn" target="_blank">VIEW RESUME</a>
+                                </div>
                         </div>
                     </div>
                 </div>
