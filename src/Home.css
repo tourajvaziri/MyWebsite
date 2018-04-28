@@ -21,3 +21,24 @@
     top: 0%;
     left: 50%;
 }
+
+.hero-container {
+    display: table;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+}
+
+.hero-content {
+    display: table-cell;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.hero-content h1 {
+    font-size: 2.3rem;
+    color: #fff;
+    margin-bottom: 0rem;
+}
