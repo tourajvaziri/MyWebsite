@@ -12,8 +12,8 @@ class Projects extends React.Component {
 
     render() {
         const opts = {
-            height: '350',
-            width: '400'
+            height: '340',
+            width: '320'
         };
         return (
             <section id="wip">
