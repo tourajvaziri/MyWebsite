@@ -4,7 +4,7 @@ import Home from './Home';
 import Footer from './Footer';
 import Resume from './Resume';
 // import Expertise from './Expertise';
-// import About from './About';
+import Projects from './Projects';
 
 // const logo = require('./logo.svg');
 
@@ -13,6 +13,7 @@ class App extends React.Component {
     return (
       <div className="container">
           <Home />
+          <Projects />
           <Resume />
           <Footer />
       </div>

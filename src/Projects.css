@@ -1,0 +1,35 @@
+#wip {
+    background: #fff;
+    text-align: center;
+}
+
+p.intro {
+    font-size: 1.5rem;
+    margin: 1rem 0 1.8rem;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.slate {
+    color: #252a30;
+}
+
+p.statement {
+    font-size: 1.6rem;
+}
+
+.gunmetal {
+    color: #524e4d;
+}
+
+.one-third.column {
+    width:50%;
+    display: inline-block;
+    max-width: 400px;
+}
+
+.description {
+    color: #93a4aa;
+    font-size: 1.2rem;
+    margin: 1rem 2rem 1.8rem;
+}
