@@ -1,20 +1,41 @@
 import * as React from 'react';
 import './Projects.css';
 const YouTube = require('react-youtube').default;
-
 const woundCareLinkIcon = require('./WoundCareLink.png');
+interface ProjectsState {
+    loadWoundCareLinkIframe: boolean;
+}
 
-class Projects extends React.Component {
+class Projects extends React.Component<any, ProjectsState> {
+    constructor(props: any) {
+        super(props);
+        this.handleWoundCareLinkClick = this.handleWoundCareLinkClick.bind(this);
+        this.state = { loadWoundCareLinkIframe: false };
+    }
+
     _onReady(event: any) {
         // access to player in all event handlers via event.target
         event.target.pauseVideo();
-      }
+    }
+
+    handleWoundCareLinkClick() {
+        this.setState({ loadWoundCareLinkIframe: true });
+    }
 
     render() {
         const opts = {
             height: '340',
             width: '320'
         };
+
+        const woundCareLinkDiv = this.state.loadWoundCareLinkIframe ?
+            (
+                <iframe src="https://s3.amazonaws.com/aws-website-wwwtourajvaziricom-9naq0/WoundCareLink/index.html" width={opts.width} height={opts.height} className="startup-brand" />
+            ) :
+            (
+                <img src={woundCareLinkIcon} onClick={this.handleWoundCareLinkClick} />
+            );
+
         return (
             <section id="wip">
                 <div className="container">
@@ -26,9 +47,7 @@ class Projects extends React.Component {
                     <div className="row">
                         <div className="one-third column">
                             <div className="expertise-block wow animated">
-                                <a href="https://s3.amazonaws.com/aws-website-wwwtourajvaziricom-9naq0/WoundCareLink/index.html" target="_blank" className="startup-brand">
-                                    <img src={woundCareLinkIcon} />
-                                </a>
+                                {woundCareLinkDiv}
                                 <p className="description">
                                     <em>WoundCareLink</em>,
                                         an application that facilitates communication and reliable access
