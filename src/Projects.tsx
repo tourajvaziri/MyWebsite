@@ -4,13 +4,16 @@ const YouTube = require('react-youtube').default;
 const woundCareLinkIcon = require('./WoundCareLink.png');
 interface ProjectsState {
     loadWoundCareLinkIframe: boolean;
+    isWoundCareLinkMouseOver: boolean;
 }
 
 class Projects extends React.Component<any, ProjectsState> {
     constructor(props: any) {
         super(props);
         this.handleWoundCareLinkClick = this.handleWoundCareLinkClick.bind(this);
-        this.state = { loadWoundCareLinkIframe: false };
+        this.handleMouseEnterWoundCareLink = this.handleMouseEnterWoundCareLink.bind(this);
+        this.handleMouseLeaveWoundCareLink = this.handleMouseLeaveWoundCareLink.bind(this);
+        this.state = { loadWoundCareLinkIframe: false, isWoundCareLinkMouseOver: false };
     }
 
     _onReady(event: any) {
@@ -22,18 +25,39 @@ class Projects extends React.Component<any, ProjectsState> {
         this.setState({ loadWoundCareLinkIframe: true });
     }
 
+    handleMouseEnterWoundCareLink() {
+        this.setState({ isWoundCareLinkMouseOver: true });
+    }
+
+    handleMouseLeaveWoundCareLink() {
+        this.setState({ isWoundCareLinkMouseOver: false });
+    }
+
     render() {
         const opts = {
-            height: '340',
-            width: '320'
+            height: '440',
+            width: '420'
         };
 
         const woundCareLinkDiv = this.state.loadWoundCareLinkIframe ?
             (
-                <iframe src="https://s3.amazonaws.com/aws-website-wwwtourajvaziricom-9naq0/WoundCareLink/index.html" width={opts.width} height={opts.height} className="startup-brand" />
+                <iframe src="https://s3.amazonaws.com/aws-website-wwwtourajvaziricom-9naq0/WoundCareLink/index.html" width="440" height="680" className="startup-brand" />
             ) :
             (
-                <img src={woundCareLinkIcon} onClick={this.handleWoundCareLinkClick} />
+                <div className="woundCareLinkContainer">
+                    {this.state.isWoundCareLinkMouseOver && <div className="middle">
+                        <div className="text">Play</div>
+                    </div>}
+                    <img
+                        src={woundCareLinkIcon}
+                        alt="WoundCareLink" 
+                        className="woundCareLinkImage" 
+                        onClick={this.handleWoundCareLinkClick}
+                        onMouseOver={this.handleMouseEnterWoundCareLink} 
+                        onMouseOut={this.handleMouseLeaveWoundCareLink}
+                    />
+                    
+                </div>
             );
 
         return (
