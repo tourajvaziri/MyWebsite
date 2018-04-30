@@ -4,11 +4,11 @@ const Typing = require('react-typing-animation').default;
 
 const logo = require('./logoIcon.png');
 
-interface HomeProps {
+interface HomeState {
     names: string[];
 }
-class Home extends React.Component<object, HomeProps> {
-    constructor(props: HomeProps) {
+class Home extends React.Component<any, HomeState> {
+    constructor(props: any) {
         super(props);
         this.state = {
             names: ['.NET applications',
