@@ -5,6 +5,8 @@ const woundCareLinkIcon = require('./WoundCareLink.png');
 interface ProjectsState {
     loadWoundCareLinkIframe: boolean;
     isWoundCareLinkMouseOver: boolean;
+    woundCareLinkIframeFinishedLoading: boolean;
+    woundCareLinkIframeFinishedLoadingTimer: any;
 }
 
 class Projects extends React.Component<any, ProjectsState> {
@@ -13,7 +15,7 @@ class Projects extends React.Component<any, ProjectsState> {
         this.handleWoundCareLinkClick = this.handleWoundCareLinkClick.bind(this);
         this.handleMouseEnterWoundCareLink = this.handleMouseEnterWoundCareLink.bind(this);
         this.handleMouseLeaveWoundCareLink = this.handleMouseLeaveWoundCareLink.bind(this);
-        this.state = { loadWoundCareLinkIframe: false, isWoundCareLinkMouseOver: false };
+        this.state = { loadWoundCareLinkIframe: false, isWoundCareLinkMouseOver: false, woundCareLinkIframeFinishedLoading: false, woundCareLinkIframeFinishedLoadingTimer: null };
     }
 
     _onReady(event: any) {
@@ -23,6 +25,13 @@ class Projects extends React.Component<any, ProjectsState> {
 
     handleWoundCareLinkClick() {
         this.setState({ loadWoundCareLinkIframe: true });
+
+        let timer = setInterval(
+            () => this.checkForWoundCareLinkStart(),
+            1000
+        );
+
+        this.setState({ woundCareLinkIframeFinishedLoadingTimer: timer });
     }
 
     handleMouseEnterWoundCareLink() {
@@ -33,30 +42,47 @@ class Projects extends React.Component<any, ProjectsState> {
         this.setState({ isWoundCareLinkMouseOver: false });
     }
 
+    checkForWoundCareLinkStart() {
+        let iframe = (document.getElementById('woundCareLinkIframe') as HTMLIFrameElement);
+        if (iframe != null) {
+            var innerDoc = iframe.contentDocument || (iframe.contentWindow ? iframe.contentWindow.document : null);
+            if (innerDoc != null) {
+                var s = innerDoc.getElementsByTagName('ion-input');
+                if (s.length > 0) {
+                    this.setState({ woundCareLinkIframeFinishedLoading: true });
+                    clearInterval(this.state.woundCareLinkIframeFinishedLoadingTimer);
+                }
+            }
+        }
+    }
+
     render() {
         const opts = {
             height: '440',
-            width: '420'
+            width: '330'
         };
 
         const woundCareLinkDiv = this.state.loadWoundCareLinkIframe ?
             (
-                <iframe src="https://s3.amazonaws.com/aws-website-wwwtourajvaziricom-9naq0/WoundCareLink/index.html" width="440" height="680" className="startup-brand" />
+                <div className="woundCareLinkIframeContainer">
+                    {!this.state.woundCareLinkIframeFinishedLoading && <div className="loader" />}
+                    <iframe id="woundCareLinkIframe" src="https://tourajvaziri.info/WoundCareLink/index.html" width="330" height="680" className="startup-brand" />
+                </div>
             ) :
             (
                 <div className="woundCareLinkContainer">
                     {this.state.isWoundCareLinkMouseOver && <div className="middle">
-                        <div className="text">Play</div>
+                        <div className="text">Launch</div>
                     </div>}
                     <img
                         src={woundCareLinkIcon}
-                        alt="WoundCareLink" 
-                        className="woundCareLinkImage" 
+                        alt="WoundCareLink"
+                        className="woundCareLinkImage"
                         onClick={this.handleWoundCareLinkClick}
-                        onMouseOver={this.handleMouseEnterWoundCareLink} 
+                        onMouseOver={this.handleMouseEnterWoundCareLink}
                         onMouseOut={this.handleMouseLeaveWoundCareLink}
                     />
-                    
+
                 </div>
             );
 
@@ -69,7 +95,7 @@ class Projects extends React.Component<any, ProjectsState> {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="one-third column">
+                        <div className="one-third column" onClick={this.handleMouseEnterWoundCareLink} >
                             <div className="expertise-block wow animated">
                                 {woundCareLinkDiv}
                                 <p className="description">
