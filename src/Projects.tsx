@@ -26,12 +26,12 @@ class Projects extends React.Component<any, ProjectsState> {
     handleWoundCareLinkClick() {
         this.setState({ loadWoundCareLinkIframe: true });
 
-        let timer = setInterval(
-            () => this.checkForWoundCareLinkStart(),
-            1000
-        );
+        // let timer = setInterval(
+        //     () => this.checkForWoundCareLinkStart(),
+        //     1000
+        // );
 
-        this.setState({ woundCareLinkIframeFinishedLoadingTimer: timer });
+        // this.setState({ woundCareLinkIframeFinishedLoadingTimer: timer });
     }
 
     handleMouseEnterWoundCareLink() {
@@ -65,8 +65,8 @@ class Projects extends React.Component<any, ProjectsState> {
         const woundCareLinkDiv = this.state.loadWoundCareLinkIframe ?
             (
                 <div className="woundCareLinkIframeContainer">
-                    {!this.state.woundCareLinkIframeFinishedLoading && <div className="loader" />}
-                    <iframe id="woundCareLinkIframe" src="https://tourajvaziri.info/WoundCareLink/index.html" width="330" height="680" className="startup-brand" />
+                    {/* {!this.state.woundCareLinkIframeFinishedLoading && <div className="loader" />} */}
+                    <iframe id="woundCareLinkIframe" src="https://s3.amazonaws.com/aws-website-wwwtourajvaziricom-9naq0/WoundCareLink/woundcarelinkindex.html" width="330" height="680" className="startup-brand" />
                 </div>
             ) :
             (
