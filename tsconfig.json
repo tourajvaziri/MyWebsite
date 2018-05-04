@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "outDir": "build/dist",
-    "module": "es6",
-    "target": "es6",
+    "module": "esnext",
+    "target": "es5",
     "lib": ["es6", "dom"],
     "sourceMap": true,
     "allowJs": true,
