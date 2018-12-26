@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './Projects.css';
+import ReactPlayer from 'react-player';
 const YouTube = require('react-youtube').default;
 const woundCareLinkIcon = require('./WoundCareLink.png');
 interface ProjectsState {
@@ -7,6 +8,7 @@ interface ProjectsState {
     isWoundCareLinkMouseOver: boolean;
     woundCareLinkIframeFinishedLoading: boolean;
     woundCareLinkIframeFinishedLoadingTimer: any;
+    isGrydXRDemoClicked: boolean;
 }
 
 class Projects extends React.Component<any, ProjectsState> {
@@ -15,7 +17,8 @@ class Projects extends React.Component<any, ProjectsState> {
         this.handleWoundCareLinkClick = this.handleWoundCareLinkClick.bind(this);
         this.handleMouseEnterWoundCareLink = this.handleMouseEnterWoundCareLink.bind(this);
         this.handleMouseLeaveWoundCareLink = this.handleMouseLeaveWoundCareLink.bind(this);
-        this.state = { loadWoundCareLinkIframe: false, isWoundCareLinkMouseOver: false, woundCareLinkIframeFinishedLoading: false, woundCareLinkIframeFinishedLoadingTimer: null };
+        this.handleGrydXRDemoClick = this.handleGrydXRDemoClick.bind(this);
+        this.state = { loadWoundCareLinkIframe: false, isWoundCareLinkMouseOver: false, woundCareLinkIframeFinishedLoading: false, woundCareLinkIframeFinishedLoadingTimer: null, isGrydXRDemoClicked: false };
     }
 
     _onReady(event: any) {
@@ -42,6 +45,10 @@ class Projects extends React.Component<any, ProjectsState> {
         this.setState({ isWoundCareLinkMouseOver: false });
     }
 
+    handleGrydXRDemoClick() {
+        this.setState({ isGrydXRDemoClicked: !this.state.isGrydXRDemoClicked });
+    }
+
     checkForWoundCareLinkStart() {
         let iframe = (document.getElementById('woundCareLinkIframe') as HTMLIFrameElement);
         if (iframe != null) {
@@ -61,7 +68,7 @@ class Projects extends React.Component<any, ProjectsState> {
             height: '440',
             width: '330'
         };
-
+        const grydXRDemoURL = 'https://s3.amazonaws.com/aws-website-wwwtourajvaziricom-9naq0/Work/Gryd/GrydXRDemo.mov';
         const woundCareLinkDiv = this.state.loadWoundCareLinkIframe ?
             (
                 <div className="woundCareLinkIframeContainer">
@@ -113,10 +120,27 @@ class Projects extends React.Component<any, ProjectsState> {
                                     opts={opts}
                                     onReady={this._onReady}
                                 />
-                                {/* <iframe width="350" height="315" src="https://www.youtube.com/embed/5NS69FrG3UI" allowfullscreen="" /> */}
                                 <p className="description">
                                     <em>Garibaldi Stakes</em>,
                                         an INNOVATIVE horse racing game that uses augmented reality technology to turn any surface into a game table.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="one-third column">
+                            <div className="expertise-block wow animated">
+                                <ReactPlayer
+                                    className="clickable" 
+                                    onClick={this.handleGrydXRDemoClick}
+                                    url={grydXRDemoURL} 
+                                    playing={this.state.isGrydXRDemoClicked} 
+                                    loop={true} 
+                                    width={opts.width} 
+                                    height={opts.height} 
+                                    controls={true}
+                                />
+                                <p className="description">
+                                    <em>Gryd XR</em>,
+                                        a Virtual Reality real estate app running on Google Cardboard for Android and iOS, Oculus Go and Samsung Gear VR.
                                 </p>
                             </div>
                         </div>
