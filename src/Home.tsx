@@ -2,8 +2,6 @@ import * as React from 'react';
 import './Home.css';
 const Typing = require('react-typing-animation').default;
 
-const logo = require('./logoIcon.png');
-
 interface HomeState {
     names: string[];
 }
@@ -38,9 +36,6 @@ class Home extends React.Component<any, HomeState> {
             <div id="fullscreen-hero" className="home-hero">
                 <div className="hero-container">
                     <div className="hero-content">
-                        <a href="#" className="home-logo">
-                            <img id="logo" src={logo} alt="logo" />
-                        </a>
                         <h1 className="cd-headine letters type">
                             <span>Hi, I'm Touraj. I design and build</span>
                             <Typing loop="true" speed={100}>
