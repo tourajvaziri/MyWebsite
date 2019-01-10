@@ -11,7 +11,7 @@ class Footer extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="twelve columns">
-                                <p>Created by me &copy; 2018.</p>
+                                <p>Created by me &copy; 2019.</p>
                                 <div className="social-links">
                     <a href="https://www.github.com/tourajvaziri" target="_blank" className="fa fa-github" />
                                     &nbsp;
