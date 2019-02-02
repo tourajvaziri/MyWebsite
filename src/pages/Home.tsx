@@ -12,7 +12,7 @@ class Home extends React.Component<any, HomeState> {
             names: ['.NET applications',
                 'Mobile applications',
                 'Augmented Reality applications',
-                'Virtual Reality applications ',
+                'Virtual Reality applications',
                 'Web applications',
                 'C# applications',
                 'Java applications',
