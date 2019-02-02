@@ -11,7 +11,7 @@
 }
 
 .home-hero {
-    background-image: url('./touraj.jpg');
+    background-image: url('../../static/touraj.jpg');
 }
 
 #logo {

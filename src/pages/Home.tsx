@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './Home.css';
+import '../styles/Home.css';
 const Typing = require('react-typing-animation').default;
 
 interface HomeState {

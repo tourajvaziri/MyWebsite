@@ -1,7 +1,7 @@
 import * as React from 'react';
-import './Projects.css';
+import '../styles/Projects.css';
 const YouTube = require('react-youtube').default;
-const woundCareLinkIcon = require('./WoundCareLink.png');
+const woundCareLinkIcon = require('../../static/WoundCareLink.png');
 interface ProjectsState {
     loadWoundCareLinkIframe: boolean;
     isWoundCareLinkMouseOver: boolean;

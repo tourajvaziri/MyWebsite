@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './Footer.css';
+import '../styles/Footer.css';
 
 // const logo = require('./logoIcon.png');
 {/* <img id="logoFooter" src={logo} alt="logo"/> */ }
