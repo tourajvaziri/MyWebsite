@@ -7,9 +7,7 @@ footer {
 
 /* Style all font awesome icons */
 .fa {
-    padding: 10px;
-    font-size: 20px;
-    width: 20px;
+    padding: 5px;
     text-align: center;
     text-decoration: none;
 }

@@ -21,3 +21,16 @@ body {
   .container {
     display: block;
   }
+
+  .btn {
+    display: inline-block;
+    height: auto;
+    line-height: 4.0rem;
+    border-radius: 5em;
+    background:#1AAB8A;
+    color: #252a30;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+}

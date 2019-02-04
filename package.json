@@ -12,14 +12,22 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "dependencies": {
+    "@emotion/core": "^10.0.6",
     "gatsby": "^2.0.104",
+    "gatsby-plugin-emotion": "^4.0.3",
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-typescript": "^2.0.4",
+    "gatsby-plugin-typography": "^2.2.7",
+    "gatsby-source-filesystem": "^2.0.20",
+    "gatsby-transformer-remark": "^2.2.3",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "react-typing-animation": "^1.3.3",
-    "react-youtube": "^7.9.0"
+    "react-typography": "^0.16.18",
+    "react-youtube": "^7.9.0",
+    "typography": "^0.16.18",
+    "typography-theme-kirkham": "^0.16.18"
   },
   "repository": {
     "type": "git",

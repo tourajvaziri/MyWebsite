@@ -16,8 +16,8 @@ class Footer extends React.Component {
                                     <a href="https://www.github.com/tourajvaziri">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
-                                            width="24"
-                                            height="24"
+                                            width="34"
+                                            height="34"
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
@@ -33,8 +33,8 @@ class Footer extends React.Component {
                                     <a href="https://www.linkedin.com/in/tourajvaziri/">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
-                                            width="24"
-                                            height="24"
+                                            width="34"
+                                            height="34"
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import '../styles/Home.css';
 const Typing = require('react-typing-animation').default;
+import { Link } from "gatsby";
 
 interface HomeState {
     names: string[];
@@ -43,6 +44,9 @@ class Home extends React.Component<any, HomeState> {
                             </Typing>
                         </h1>
                         {/* <img id="profilepic" src={profilePic} alt="profile picture"/> */}
+                        <div className="btn" style={{ margin: `3rem auto`, padding: `0 1rem` }}>
+                            <Link to={`/blog/`} className="btn" style={{ width: 150 }} >Blog</Link>
+                        </div>
                     </div>
                 </div>
             </div>
