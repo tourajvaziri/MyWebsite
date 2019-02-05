@@ -91,7 +91,7 @@ class Projects extends React.Component<any, ProjectsState> {
                 <div className="container">
                     <div className="row">
                         <div className="eight columns offset-by-two columns">
-                            <p className="intro slate">Example Projects</p>
+                            <p >Example Projects</p>
                         </div>
                     </div>
                     <div className="row">
