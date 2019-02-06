@@ -2,8 +2,8 @@ import * as React from "react";
 import { css } from "@emotion/core";
 import { rhythm } from "../utils/typography";
 
-export default class Contact extends React.Component {
-  render() {
+export default class Contact extends React.Component {  
+    render() {
     return (
       <div>
         <div
@@ -20,7 +20,17 @@ export default class Contact extends React.Component {
 
           <h3>Get in touch!</h3>
 
-          <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+          <form name="contact" method="POST" data-netlify="true"
+          data-netlify-honeypot="bot-field">
+                    {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                    <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>
+              Don’t fill this out:{" "}
+              <input name="bot-field" />
+            </label>
+          </p>
+
             <p>
               <label>
                 <input
