@@ -12,7 +12,7 @@ export default class Contact extends React.Component {
             max-width: 500;
             padding: ${rhythm(2)};
             padding-top: ${rhythm(1.5)};
-            background-color: #434343;
+            background-color: #FED766;
             text-align: center;
           `}
         >
@@ -103,6 +103,9 @@ export default class Contact extends React.Component {
               background:#1AAB8A;
               font-size: 1.2rem;
               font-weight: 700;
+              :hover {
+                opacity: 0.7;
+            }
               `}
               >SUBMIT</button>
             </p>

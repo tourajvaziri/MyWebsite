@@ -3,6 +3,7 @@ import '../styles/Projects.css';
 const YouTube = require('react-youtube').default;
 const woundCareLinkIcon = require('../../static/WoundCareLink.png');
 import { css } from "@emotion/core";
+import { rhythm } from "../utils/typography";
 
 interface ProjectsState {
     loadWoundCareLinkIframe: boolean;
@@ -89,7 +90,12 @@ class Projects extends React.Component<any, ProjectsState> {
             );
 
         return (
-            <section id="wip">
+            <section id="wip"
+            css={css`
+            padding: ${rhythm(2)};
+            padding-top: ${rhythm(1.5)};
+          `}
+            >
                 <div className="container">
                     <div className="row">
                         <div className="eight columns offset-by-two columns">
@@ -138,6 +144,24 @@ class Projects extends React.Component<any, ProjectsState> {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div>
+                    <a     css={css`
+                    display: inline-block;
+                    height: auto;
+                    width: 15em;
+                    line-height: 4.0rem;
+                    border-radius: 5em;
+                    background:#1AAB8A;
+                    color: #252a30;
+                    white-space: nowrap;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    text-decoration: none;
+                    :hover {
+                        opacity: 0.7;
+                    }
+              `} href="https://s3.amazonaws.com/aws-website-wwwtourajvaziricom-9naq0/Touraj+Vaziri+Resume.pdf" className="btn">VIEW FULL RESUME</a>
                 </div>
             </section>
         );

@@ -19,7 +19,6 @@ const IndexPage = ( {data} : { data: any} ) => (
     <BlogSection />
     <Projects />
     <Contact />
-    <Resume />
     <Footer />
   </div>
 );

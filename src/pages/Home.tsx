@@ -10,17 +10,26 @@ class Home extends React.Component<any, HomeState> {
     constructor(props: any) {
         super(props);
         this.state = {
-            names: ['.NET applications',
-                'Mobile applications',
-                'Augmented Reality applications',
-                'Virtual Reality applications',
-                'Web applications',
-                'C# applications',
-                'Java applications',
-                'Automation tools',
-                'Web services',
-                'Client-Server based applications',
-                'Databases']
+            names: ['Mobile Applications',
+                'Web Services',
+                'Client-Server applications',
+                'Restful Web APIs',
+                'APIs integration',
+                'Automation Tools',
+                'Game Engine Programming',
+                'Augment Reality',
+                'Virtual Reality',
+                'Web Applications',
+                'Object-oriented design patterns',
+                'Agile/Test driven development',
+                'Desktop Applications',
+                'Databases',
+                'Cloud Computing',
+                'Networking Protocols',
+                'Multithreading',
+                'Version Control Systems',
+                'Project Management',
+                '2D and 3D Graphics']
         };
     }
 
@@ -38,7 +47,7 @@ class Home extends React.Component<any, HomeState> {
                 <div className="hero-container">
                     <div className="hero-content">
                         <h1 className="cd-headine letters type">
-                            <span>Hi, I'm Touraj. I design and build</span>
+                            <span>Hi, I'm Touraj. I'm experienced in</span>
                             <Typing loop="true" speed={100}>
                                 {menuNames}
                             </Typing>
