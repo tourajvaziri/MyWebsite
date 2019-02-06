@@ -41,13 +41,9 @@ export default class BlogSection extends React.Component {
                 background-color: #5cba91;
               `}
             >
-              <div
-                css={css`
+            <h1 css={css`
                   text-align: center;
-                `}
-              >
-                Latest Blog
-              </div>
+                `}> Latest Blog</h1>
               {data.allMarkdownRemark.edges.map(({ node }: { node: any }) => (
                 <div key={node.id}>
                   <Link

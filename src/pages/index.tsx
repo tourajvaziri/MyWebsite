@@ -6,6 +6,7 @@ import Projects from "./Projects";
 const Helmet = require("react-helmet").default;
 import { graphql } from "gatsby";
 import BlogSection from "../components/BlogSection";
+import Contact from "../components/contact";
 
 const IndexPage = ( {data} : { data: any} ) => (
   <div className="container">
@@ -17,6 +18,7 @@ const IndexPage = ( {data} : { data: any} ) => (
     <Home />
     <BlogSection />
     <Projects />
+    <Contact />
     <Resume />
     <Footer />
   </div>

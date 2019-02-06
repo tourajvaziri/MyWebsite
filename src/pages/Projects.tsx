@@ -2,6 +2,8 @@ import * as React from 'react';
 import '../styles/Projects.css';
 const YouTube = require('react-youtube').default;
 const woundCareLinkIcon = require('../../static/WoundCareLink.png');
+import { css } from "@emotion/core";
+
 interface ProjectsState {
     loadWoundCareLinkIframe: boolean;
     isWoundCareLinkMouseOver: boolean;
@@ -91,7 +93,10 @@ class Projects extends React.Component<any, ProjectsState> {
                 <div className="container">
                     <div className="row">
                         <div className="eight columns offset-by-two columns">
-                            <p >Example Projects</p>
+                        <h1 css={css`
+                            text-align: center;
+                            `}> Example Projects
+                        </h1>
                         </div>
                     </div>
                     <div className="row">
