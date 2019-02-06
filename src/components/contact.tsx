@@ -20,17 +20,16 @@ export default class Contact extends React.Component {
 
           <h3>Get in touch!</h3>
 
-          <form name="contact" method="POST" data-netlify="true"
-          data-netlify-honeypot="bot-field">
+          <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
                     {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                     <input type="hidden" name="form-name" value="contact" />
+          {/* The hidden field is used for spam filtering */}
           <p hidden>
             <label>
               Don’t fill this out:{" "}
               <input name="bot-field" />
             </label>
           </p>
-
             <p>
               <label>
                 <input
@@ -92,9 +91,18 @@ export default class Contact extends React.Component {
               </label>
             </p>
             <p>
-              <button className="btn" type="submit"
+              <button type="submit"
               css={css`
               width: 8em;
+              padding: 14px 20px;
+              margin: 8px 0;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              border-radius: 5em;
+              background:#1AAB8A;
+              font-size: 1.2rem;
+              font-weight: 700;
               `}
               >SUBMIT</button>
             </p>
