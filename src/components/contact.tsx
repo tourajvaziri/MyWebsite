@@ -20,7 +20,7 @@ export default class Contact extends React.Component {
 
           <h3>Get in touch!</h3>
 
-          <form name="contact" method="POST" data-netlify="true">
+          <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
             <p>
               <label>
                 <input
@@ -81,7 +81,6 @@ export default class Contact extends React.Component {
                 />
               </label>
             </p>
-            <div data-netlify-recaptcha="true"></div>
             <p>
               <button className="btn" type="submit"
               css={css`
