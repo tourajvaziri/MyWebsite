@@ -19,7 +19,7 @@ export default class BlogSection extends React.Component {
                   id
                   frontmatter {
                     title
-                    date(formatString: "DD MMMM, YYYY")
+                    date(formatString: "MMM DD, YYYY")
                   }
                   fields {
                     slug
@@ -38,12 +38,13 @@ export default class BlogSection extends React.Component {
                 max-width: 500;
                 padding: ${rhythm(2)};
                 padding-top: ${rhythm(1.5)};
-                background-color: #5cba91;
+                padding-bottom: ${rhythm(5)};
+                background-color: #B6B6B6;
               `}
             >
-            <h1 css={css`
+              <h1 css={css`
                   text-align: center;
-                `}> Latest Blog</h1>
+                `}> Recent Articles</h1>
               {data.allMarkdownRemark.edges.map(({ node }: { node: any }) => (
                 <div key={node.id}>
                   <Link
@@ -55,29 +56,44 @@ export default class BlogSection extends React.Component {
                   >
                     <h3
                       css={css`
-                        margin-bottom: ${rhythm(1 / 4)};
+                        margin-bottom: ${rhythm(0.5)};
+                        text-decoration: underline;
+                        font-style: italic;
                       `}
                     >
-                      {node.frontmatter.title}{" "}
-                      <span
-                        css={css`
-                          color: #bbb;
-                        `}
-                      >
-                        — {node.frontmatter.date}
-                      </span>
+                      {node.frontmatter.title}
                     </h3>
-                    <p>{node.excerpt}</p>
+                    <small>{node.frontmatter.date}</small>
+                    <p
+                    css={css`
+                    margin-top: ${rhythm(0.3)};
+                  `}
+                    >{node.excerpt}</p>
                   </Link>
                 </div>
               ))}
-         <Link
-            to={`/blog`}
-            css={css`
-        float: right;
+              <Link
+                to={`/blog`}
+                css={css`
+                    float: right;
+                    display: inline-block;
+                    height: auto;
+                    width: 8em;
+                    line-height: 4.0rem;
+                    border-radius: 5em;
+                    background:#1AAB8A;
+                    color: #252a30;
+                    white-space: nowrap;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    text-decoration: none;
+                    text-align: center;
+                    :hover {
+                        opacity: 0.7;
+                    }
       `}
-          >
-            All blogs ({data.allMarkdownRemark.totalCount})
+              >
+                All blogs ({data.allMarkdownRemark.totalCount})
     </Link>
             </div>
           </div>

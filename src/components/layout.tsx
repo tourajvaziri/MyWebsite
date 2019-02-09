@@ -37,6 +37,8 @@ export class Layout extends React.PureComponent<Props>  {
             to={`/`}
             css={css`
         float: right;
+        text-decoration: none;
+        color: inherit;
       `}
           >
             Home

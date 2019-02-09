@@ -25,30 +25,33 @@ export default class Blog extends React.PureComponent<Props> {
           <h4>{this.props.data.allMarkdownRemark.totalCount} Posts</h4>
           {this.props.data.allMarkdownRemark.edges.map(
             ({ node }: { node: any }) => (
-              <div key={node.id}>
-                <Link
-                  to={node.fields.slug}
-                  css={css`
-                    text-decoration: none;
-                    color: inherit;
-                  `}
-                >
-                  <h3
+              <div key={node.id}
+              css={css`
+              padding-top: ${rhythm(2)};
+            `}>
+                           <Link
+                    to={node.fields.slug}
                     css={css`
-                      margin-bottom: ${rhythm(1 / 4)};
+                      text-decoration: none;
+                      color: inherit;
                     `}
                   >
-                    {node.frontmatter.title}{" "}
-                    <span
+                    <h3
                       css={css`
-                        color: #bbb;
+                        margin-bottom: ${rhythm(0.5)};
+                        text-decoration: underline;
+                        font-style: italic;
                       `}
                     >
-                      — {node.frontmatter.date}
-                    </span>
-                  </h3>
-                  <p>{node.excerpt}</p>
-                </Link>
+                      {node.frontmatter.title}
+                    </h3>
+                    <small>{node.frontmatter.date}</small>
+                    <p
+                    css={css`
+                    margin-top: ${rhythm(0.3)};
+                  `}
+                    >{node.excerpt}</p>
+                  </Link>
               </div>
             )
           )}
@@ -67,7 +70,7 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMM DD, YYYY")
           }
           fields {
             slug

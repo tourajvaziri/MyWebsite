@@ -101,7 +101,7 @@ class Projects extends React.Component<any, ProjectsState> {
                         <div className="eight columns offset-by-two columns">
                         <h1 css={css`
                             text-align: center;
-                            `}> Example Projects
+                            `}> Recent Projects
                         </h1>
                         </div>
                     </div>
