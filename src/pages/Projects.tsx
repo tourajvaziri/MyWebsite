@@ -92,8 +92,8 @@ class Projects extends React.Component<any, ProjectsState> {
         return (
             <section id="wip"
             css={css`
-            padding: ${rhythm(2)};
             padding-top: ${rhythm(1.5)};
+            padding-bottom: ${rhythm(2)};
           `}
             >
                 <div className="container">
