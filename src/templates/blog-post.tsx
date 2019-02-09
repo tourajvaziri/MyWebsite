@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { Layout } from "../components/layout";
+import { DiscussionEmbed } from "disqus-react";
 
 interface Props {
   data: any;
@@ -12,6 +13,11 @@ export default class BlogPost extends React.PureComponent<Props> {
   public render() {
     const post = this.props.data.markdownRemark;
     const { previous, next } = this.props.pageContext;
+    const disqusShortname = "tourajvaziri";
+    const disqusConfig = {
+      identifier: post.id,
+      title: post.frontmatter.title,
+    };
     return (
       <Layout>
         <div>
@@ -42,6 +48,7 @@ export default class BlogPost extends React.PureComponent<Props> {
             )}
           </li>
         </ul>
+        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       </Layout>
     )
   }
