@@ -1,7 +1,6 @@
 import * as React from "react";
 import Home from "./Home";
 import Footer from "./Footer";
-import Resume from "./Resume";
 import Projects from "./Projects";
 const Helmet = require("react-helmet").default;
 import { graphql } from "gatsby";
@@ -16,7 +15,7 @@ const IndexPage = ( {data} : { data: any} ) => (
       <link rel="canonical" href="http://www.tourajvaziri.info" />
     </Helmet>
     <Home />
-    <BlogSection />
+    {/* <BlogSection /> */}
     <Projects />
     <Contact />
     <Footer />
