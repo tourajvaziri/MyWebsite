@@ -69,7 +69,7 @@ class Projects extends React.Component<any, ProjectsState> {
             (
                 <div className="woundCareLinkIframeContainer">
                     {/* {!this.state.woundCareLinkIframeFinishedLoading && <div className="loader" />} */}
-                    <iframe id="woundCareLinkIframe" src="https://s3.amazonaws.com/aws-website-wwwtourajvaziricom-9naq0/WoundCareLink/woundcarelinkindex.html" width="330" height="680" className="startup-brand" />
+                    <iframe id="woundCareLinkIframe" src="https://sharedfiless.s3.eu-west-3.amazonaws.com/WoundCareLink/woundcarelinkindex.html" width="330" height="680" className="startup-brand" />
                 </div>
             ) :
             (
@@ -161,7 +161,7 @@ class Projects extends React.Component<any, ProjectsState> {
                     :hover {
                         opacity: 0.7;
                     }
-              `} href="https://s3.amazonaws.com/aws-website-wwwtourajvaziricom-9naq0/Touraj+Vaziri+Resume.pdf" className="btn">VIEW FULL RESUME</a>
+              `} href="https://sharedfiless.s3.eu-west-3.amazonaws.com/Touraj+Vaziri+Resume.pdf" className="btn">VIEW FULL RESUME</a>
                 </div>
             </section>
         );
