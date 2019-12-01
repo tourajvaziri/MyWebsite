@@ -39,7 +39,7 @@ export default class BlogSection extends React.Component {
                 padding: ${rhythm(2)};
                 padding-top: ${rhythm(1.5)};
                 padding-bottom: ${rhythm(5)};
-                background-color: #B6B6B6;
+                background-color: #FED766;
               `}
             >
               <h1 css={css`

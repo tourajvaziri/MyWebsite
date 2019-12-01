@@ -15,7 +15,7 @@ const IndexPage = ( {data} : { data: any} ) => (
       <link rel="canonical" href="http://www.tourajvaziri.info" />
     </Helmet>
     <Home />
-    {/* <BlogSection /> */}
+    <BlogSection />
     <Projects />
     <Contact />
     <Footer />
