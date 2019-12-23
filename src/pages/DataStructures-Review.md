@@ -1,6 +1,7 @@
 ---
 title: "Data Structures Review for Software Interviews"
 date: "2019-12-22"
+excerpt: "Going briefly over the most common Data Structures and explaining how to select one over another when solving a Software Interview Coding question."
 ---
 
 <p style="margin:0cm;margin-bottom:.0001pt;font-size:16px;font-family:&quot;Times New Roman&quot;,serif;"><span style="font-size: 24px; font-family: Arial, Helvetica, sans-serif;">Knowing Data Structures is crucial for any software interview and almost all the coding questions asked during an interview are based on Data Structures, thus every candidate should brush up on their Data Structures and be ready to solve questions related to them.</span></p>

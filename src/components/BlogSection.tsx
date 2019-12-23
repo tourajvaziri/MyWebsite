@@ -20,11 +20,11 @@ export default class BlogSection extends React.Component {
                   frontmatter {
                     title
                     date(formatString: "MMM DD, YYYY")
+                    excerpt
                   }
                   fields {
                     slug
                   }
-                  excerpt
                 }
               }
             }
@@ -68,7 +68,7 @@ export default class BlogSection extends React.Component {
                     css={css`
                     margin-top: ${rhythm(0.3)};
                   `}
-                    >{node.excerpt}</p>
+                    >{node.frontmatter.excerpt}</p>
                   </Link>
                 </div>
               ))}

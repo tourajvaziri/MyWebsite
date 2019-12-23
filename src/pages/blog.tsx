@@ -50,7 +50,7 @@ export default class Blog extends React.PureComponent<Props> {
                     css={css`
                     margin-top: ${rhythm(0.3)};
                   `}
-                    >{node.excerpt}</p>
+                    >{node.frontmatter.excerpt}</p>
                   </Link>
               </div>
             )
@@ -71,11 +71,11 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "MMM DD, YYYY")
+            excerpt
           }
           fields {
             slug
           }
-          excerpt
         }
       }
     }

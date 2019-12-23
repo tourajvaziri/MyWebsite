@@ -1,6 +1,7 @@
 ---
 title: "Unity - ARWorldMap Save Load Tags"
 date: "2019-12-01"
+excerpt: "Example Unity demo for persistent save and load of Game Objects in ARKit."
 ---
 
 This demo shows an example for saving and loading Unity Game Objects in ARKit. 
