@@ -45,6 +45,7 @@ export default class Contact extends React.Component {
                     box-sizing: border-box;
                   `}
                   type="text"
+                  id="contactName"
                   name="name"
                   placeholder="Name"
                 />
@@ -65,6 +66,7 @@ export default class Contact extends React.Component {
                     box-sizing: border-box;
                   `}
                   type="email"
+                  id="contactEmail"
                   name="email"
                   placeholder="Enter email"
                 />
@@ -86,6 +88,7 @@ export default class Contact extends React.Component {
                     height: 200px;
                   `}
                   name="message"
+                  id="contactMessage"
                   placeholder="Your Message"
                 />
               </label>
@@ -107,6 +110,7 @@ export default class Contact extends React.Component {
                 opacity: 0.7;
             }
               `}
+              id="submitEmail"
               >SUBMIT</button>
             </p>
           </form>
