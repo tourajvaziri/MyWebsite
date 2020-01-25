@@ -36,16 +36,16 @@ class Projects extends React.Component<any, ProjectsState> {
         // );
 
         // this.setState({ woundCareLinkIframeFinishedLoadingTimer: timer });
-    }
-
-    handleMouseEnterWoundCareLink() {
-        this.setState({ isWoundCareLinkMouseOver: true });
 
         // Lets track that custom click
         trackCustomEvent({
             category: "View WoundCareLink app",
             action: "User clicked link to view WoundCareLink app"
         })
+    }
+
+    handleMouseEnterWoundCareLink() {
+        this.setState({ isWoundCareLinkMouseOver: true });
     }
 
     handleMouseLeaveWoundCareLink() {
