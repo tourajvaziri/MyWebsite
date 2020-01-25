@@ -93,30 +93,16 @@ export default class BlogSection extends React.Component {
                         opacity: 0.7;
                     }
       `}
+       onClick={e => {
+        // Lets track that custom click
+        trackCustomEvent({
+          category: "View Blogs",
+          action: "User clicked link to view blogs"
+        })
+      }}
               >
                 All blogs ({data.allMarkdownRemark.totalCount})
     </Link>
-
-    <button
-      onClick={e => {
-        // To stop the page reloading
-        e.preventDefault()
-        // Lets track that custom click
-        trackCustomEvent({
-          // string - required - The object that was interacted with (e.g.video)
-          category: "Special Button",
-          // string - required - Type of interaction (e.g. 'play')
-          action: "Click",
-          // string - optional - Useful for categorizing events (e.g. 'Spring Campaign')
-          label: "Gatsby Plugin Example Campaign",
-          // number - optional - Numeric value associated with the event. (e.g. A product ID)
-          value: 43
-        })
-        //... Other logic here
-      }}
-    >
-      Tap that!
-    </button>
             </div>
           </div>
         )}

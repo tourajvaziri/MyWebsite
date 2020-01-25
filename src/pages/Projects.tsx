@@ -4,6 +4,7 @@ const YouTube = require('react-youtube').default;
 const woundCareLinkIcon = require('../../static/WoundCareLink.png');
 import { css } from "@emotion/core";
 import { rhythm } from "../utils/typography";
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 interface ProjectsState {
     loadWoundCareLinkIframe: boolean;
@@ -39,6 +40,12 @@ class Projects extends React.Component<any, ProjectsState> {
 
     handleMouseEnterWoundCareLink() {
         this.setState({ isWoundCareLinkMouseOver: true });
+
+        // Lets track that custom click
+        trackCustomEvent({
+            category: "View WoundCareLink app",
+            action: "User clicked link to view WoundCareLink app"
+        })
     }
 
     handleMouseLeaveWoundCareLink() {
@@ -123,6 +130,13 @@ class Projects extends React.Component<any, ProjectsState> {
                                     videoId="5NS69FrG3UI"
                                     opts={opts}
                                     onReady={this._onReady}
+                                    onClick={e => {
+                                        // Lets track that custom click
+                                        trackCustomEvent({
+                                          category: "View Garibaldi Stakes",
+                                          action: "User clicked link to view Garibaldi Stakes Video"
+                                        })
+                                      }}
                                 />
                                 <p className="description">
                                     <em>Garibaldi Stakes</em>,
@@ -136,6 +150,13 @@ class Projects extends React.Component<any, ProjectsState> {
                                     videoId="auzT9tMjDKU"
                                     opts={opts}
                                     onReady={this._onReady}
+                                    onClick={e => {
+                                        // Lets track that custom click
+                                        trackCustomEvent({
+                                          category: "View Gryd XR",
+                                          action: "User clicked link to view Gryd XR Video"
+                                        })
+                                      }}
                                 />
                                 <p className="description">
                                     <em>Gryd XR</em>,
@@ -161,7 +182,14 @@ class Projects extends React.Component<any, ProjectsState> {
                     :hover {
                         opacity: 0.7;
                     }
-              `} href="https://sharedfiless.s3.eu-west-3.amazonaws.com/Touraj+Vaziri+Resume.pdf" className="btn">VIEW FULL RESUME</a>
+              `}     onClick={e => {
+                // Lets track that custom click
+                trackCustomEvent({
+                  category: "View Resume",
+                  action: "User clicked link to view Resume"
+                })
+              }}
+              href="https://sharedfiless.s3.eu-west-3.amazonaws.com/Touraj+Vaziri+Resume.pdf" className="btn">VIEW FULL RESUME</a>
                 </div>
             </section>
         );
