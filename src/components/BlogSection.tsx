@@ -2,6 +2,7 @@ import * as React from "react";
 import { css } from "@emotion/core";
 import { rhythm } from "../utils/typography";
 import { graphql, Link, StaticQuery } from "gatsby";
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 export default class BlogSection extends React.Component {
   render() {
@@ -95,6 +96,27 @@ export default class BlogSection extends React.Component {
               >
                 All blogs ({data.allMarkdownRemark.totalCount})
     </Link>
+
+    <button
+      onClick={e => {
+        // To stop the page reloading
+        e.preventDefault()
+        // Lets track that custom click
+        trackCustomEvent({
+          // string - required - The object that was interacted with (e.g.video)
+          category: "Special Button",
+          // string - required - Type of interaction (e.g. 'play')
+          action: "Click",
+          // string - optional - Useful for categorizing events (e.g. 'Spring Campaign')
+          label: "Gatsby Plugin Example Campaign",
+          // number - optional - Numeric value associated with the event. (e.g. A product ID)
+          value: 43
+        })
+        //... Other logic here
+      }}
+    >
+      Tap that!
+    </button>
             </div>
           </div>
         )}
