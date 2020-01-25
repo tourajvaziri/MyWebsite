@@ -130,7 +130,7 @@ class Projects extends React.Component<any, ProjectsState> {
                                     videoId="5NS69FrG3UI"
                                     opts={opts}
                                     onReady={this._onReady}
-                                    onClick={e => {
+                                    onPlay={e => {
                                         // Lets track that custom click
                                         trackCustomEvent({
                                           category: "View Garibaldi Stakes",
@@ -150,7 +150,7 @@ class Projects extends React.Component<any, ProjectsState> {
                                     videoId="auzT9tMjDKU"
                                     opts={opts}
                                     onReady={this._onReady}
-                                    onClick={e => {
+                                    onPlay={e => {
                                         // Lets track that custom click
                                         trackCustomEvent({
                                           category: "View Gryd XR",
