@@ -52,7 +52,7 @@ class Footer extends React.Component {
             </svg>
           </a>
         </div>
-        <h6>TOURAJ VAZIRI &copy; 2021.</h6>
+        <h6>TOURAJ VAZIRI &copy; 2023.</h6>
       </footer>
     );
   }
