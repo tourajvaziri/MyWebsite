@@ -16,4 +16,4 @@ The graphs of velocity and acceleration illustrate the first and second derivati
 
 The area below the velocity graph is used to demonstrate how integration works. The displacement graph shows the integral of the velocity graph.
 
-Try it now: [Interactive Calculus Simulation](https://car-displacement-velocity-and-acceleration-graphs.touraj.repl.co/)
+Try it now: [Interactive Calculus Simulation](https://replit.com/@touraj/Car-Displacement-velocity-and-acceleration-graphs)
